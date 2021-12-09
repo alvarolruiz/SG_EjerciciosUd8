@@ -1,0 +1,31 @@
+﻿
+@model SG_EjerciciosUd8.Models.Entities.clsPersona
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <form action="/Home3/PersonaModificada">
+        <label for="nombre">Nombre</label></br>
+        <input type="text" name="Nombre" id="nombre" value="@Model.Nombre" /></br>
+        <label for="apellido1">Apellido1</label></br>
+        <input type="text" name="Apellido1" id="apellido1" value="@Model.Apellido1" /></br>
+        <label for="apellido2">Apellido2</label></br>
+        <input type="text" name="Apellido2" id="apellido2" value="@Model.Apellido2" /></br>
+        <label for="direccion">Direccion</label></br>
+        <input type="text" name="Direccion" id="direccion" value="@Model.Direccion" /></br>
+        </br>
+        <button action="submit">Guardar Cambios</button>
+
+    </form>
+</body>
+</html>
